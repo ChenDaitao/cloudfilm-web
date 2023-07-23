@@ -1,0 +1,51 @@
+@import "../var/var.scss"; // 主要页面布局
+@mixin main-content {
+  padding: 10px 20px;
+}
+
+// homepage-background
+@mixin homepage-background {
+  background-image: url("../../images/bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+// $paddingSize padding宽度
+// $loadLast (value: 0 | 1) => 是否启用 last-of-type
+// $position(value: 'top' | 'bottom') => 在顶部还是底部
+@mixin with-cross-line($paddingSize: 0.5px, $loadLast: 0, $position: "bottom") {
+  $height: 2px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: calc(100%-#{$paddingSize * 2});
+    height: $height;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, calc(-#{$height}/ 2)) scaleY(0.5);
+    background-color: #eee;
+    & {
+      #{$position}: -2px;
+    }
+  }
+
+  // 同一元素队列中 判断最底部、最顶部是否需要边框下划线
+  @if $loadLast == 1 and $position == "bottom" {
+    &:last-of-type {
+      border: 0;
+      &::after {
+        height: 0;
+      }
+    }
+  }
+
+  @if $loadLast == 1 and $position == "top" {
+    &:first-of-type {
+      border: 0;
+      &::after {
+        height: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/*
+ * @Date: 2022-11-25 12:06:27
+ * @LastEditTime: 2023-02-18 22:15:22
+ * @Description: 全局样式
+ */
+
+@use "./var/var.scss" as mainVar;
+@use "./mixin/index.scss" as mainMixin;
+/* 
+  scss 单行注释打包时会被压缩，多行注释则会保留
+  ！加在注释首部可用于保存版本声明信息
+*/
+
+// 主要内容布局
+.main-content-views {
+  padding: 50px 16px;
+  margin-bottom: 0 !important; //去除内联底部距离设置 NOTE:暂未找到哪里出现问题
+  height: 100vh;
+  background: mainVar.$use-content-bgc;
+  background-color: #f3f7fa !important; //TODO:
+}
+// 底部分割线
+.bottom-cross-line {
+  @include mainMixin.with-cross-line(0.5px, 0, "bottom");
+}
+// 设置顶部圆角
+.border-top {
+  border-radius: 10px 10px 0 0;
+}
+// 设置底部圆角
+.border-bottom {
+  border-radius: 0 0 10px 10px;
+}
+// 修改vant自定义样式
+:root:root {
+  --van-collapse-item-content-text-color: #000;
+  --van-cell-text-color: #3e94ed;
+  --van-dialog-message-font-size: 16px; //提示弹窗字体
+}
+
+// tab-bar 高度
+$tab-height: 48px

@@ -1,0 +1,16 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.node.json",
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "postcss-px-to-viewport.*" //添加postcss-px-to-viewport ts类型识别
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "types": [
+      "node",
+      "dom"
+    ]
+  }
+}

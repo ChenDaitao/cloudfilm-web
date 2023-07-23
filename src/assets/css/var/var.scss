@@ -1,0 +1,25 @@
+/*
+ * @Date: 2022-11-23 10:43:13
+ * @LastEditTime: 2023-02-03 16:27:43
+ * @Description: 全局变量
+ */
+@import "./theme.scss";
+
+$avatar-size: 50px; //头像大小
+
+$svg-filter: var(--xl-svg-filter); //svg图标filter效果
+
+$border-radius: 10px; //圆角
+
+$default-content-bgc: var(--xl-default-content-bgc); //默认container背景色
+
+$use-content-bgc: var(--xl-use-content-bgc); //有内容的背景色
+
+$useless-content-bgc: var(--xl-useless-content-bgc); // 无内容的背景色
+
+// 主题色彩相关
+$color-normal: var(--xl-color-normal); //#1286FF
+$color-active: var(--xl-color-normal); //#1286FF
+$color-tips: var(--xl-color-tips); // #555
+$color-small-tips: var(--xl-color-small-tips); //#888
+$color-pTitle-tips: var(--xl-color-pTitle-tips); // #222

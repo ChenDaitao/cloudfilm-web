@@ -1,0 +1,27 @@
+/* light-color-theme  default*/
+:root[color-scheme="light"],
+:root {
+  --xl-svg-filter: constract(1);
+
+  --xl-default-content-bgc: rgb(244, 245, 252);
+  --xl-use-content-bgc: #fff;
+  --xl-useless-content-bgc: #f2f6fa;
+
+  --xl-color-normal: #1286ff;
+  --xl-color-tips: #555;
+  --xl-color-small-tips: #888;
+  --xl-color-pTitle-tips: #222;
+}
+/* dark-color-theme */
+:root[color-scheme="dark"] {
+  --xl-svg-filter: constract(0.5);
+
+  --xl-default-content-bgc: #1d1b1be8;
+  --xl-use-content-bgc: #252525;
+  --xl-useless-content-bgc: #080808;
+
+  --xl-color-normal: #1286ff;
+  --xl-color-tips: #cec9c9;
+  --xl-color-small-tips: #f7f1f1;
+  --xl-color-pTitle-tips: #adacac;
+}
